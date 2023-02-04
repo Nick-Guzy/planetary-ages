@@ -8,10 +8,11 @@ const person = new Person(31, 28, 33);
   expect(person.pastAge).toEqual(28);
   expect(person.futureAge).toEqual(33);
   });
-  // test("To accurately calculate what age you currently are on each planet", () => {
-  //   current age planet = age(Mer, Ven, Mar, Jup)
-  //   expect()
-  // });
+  
+  test("To accurately calculate what age you currently are on Mercury", () => {
+    const currentPerson = new Person(31, 28, 33);
+    expect(currentPerson.checkType().toEqual(129.16));
+  });
   // test("To accurately calculate how long until your next birthday on each planet", () => {
   //   Code: 
   //   expect()
