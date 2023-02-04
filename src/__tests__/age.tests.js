@@ -11,7 +11,7 @@ const person = new Person(31, 28, 33);
   
   test("To accurately calculate what age you currently are on Mercury", () => {
     const currentPerson = new Person(31, 28, 33);
-    expect(currentPerson.checkType().toEqual(129.16));
+    expect(currentPerson.checkType()).toBeCloseTo(129.16666666666669);
   });
   // test("To accurately calculate how long until your next birthday on each planet", () => {
   //   Code: 

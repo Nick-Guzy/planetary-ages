@@ -6,7 +6,8 @@ export default class Person {
 }
 
 checkType() {
-  // currMerAge = this.currentAge / .24;
+  const currMerAge = this.currentAge / .24;
+  return currMerAge;
   // currVenAge = this.currentAge / .62;
   // currMarAge = this.currentAge * 1.88;
   // currJupAge = this.currentAge * 11.86;
