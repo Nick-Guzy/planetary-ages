@@ -5,12 +5,3 @@ export default class Person {
   this.futureAge = futureAge;
 }
 };
-export class Planet {
-  constructor(name, ageModifier) {
-  this.name = name;
-  this.ageModifier = ageModifier
-  // this.Ven = Ven;
-  // this.Mar = Mar;
-  // this.Jup = Jup;
-    }
-  };
