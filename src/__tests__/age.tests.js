@@ -65,4 +65,13 @@ test("Should correctly tell you how long since you've had a birthday on Venus", 
   const venPastAge = Ven.checkType(person.pastAge);
   expect(venAge-venPastAge).toBeGreaterThanOrEqual(4)
 });
+
+test("Should correctly tell you how long since you've had a birthday on Mars", () => {
+  const person = new Person(31, 28, 33);
+  const Mar = new Planet("Mar", 1.88);
+  const marAge = Mar.checkType(person.currentAge);
+  const marPastAge = Mar.checkType(person.pastAge);
+  expect(marAge-marPastAge).toBeGreaterThanOrEqual(1.5)
+});
+
 });
