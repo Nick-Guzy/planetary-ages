@@ -119,4 +119,13 @@ test("Should correctly tell you how long until you'll have a birthday on Mars", 
 
 });
 
+test("Should correctly tell you how long until you'll have a birthday on Jupiter", () => {
+  const person = new Person(31, 28, 33);
+  const Jup = new Planet("Jup", 11.86);
+  const jupAge = Jup.checkType(person.currentAge);
+  const jupFutureAge = Jup.checkType(person.futureAge);
+  expect(jupFutureAge-jupAge).toBeGreaterThanOrEqual(0.1)
+
+});
+
 });
