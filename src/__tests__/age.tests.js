@@ -16,4 +16,12 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
   expect(Mer.name).toEqual("Mer");
   expect(merAge).toBeGreaterThanOrEqual(129)
   });
+
+  test("Should correctly construct Venus and you how old you are on Venus", () => {
+    const person = new Person(31, 28, 33);
+    const Ven = new Planet("Ven", .62);
+    const venAge = Ven.checkType(person);
+    expect(Ven.name).toEqual("Ven");
+    expect(venAge).toBeGreaterThanOrEqual(50)
+  });
 });
