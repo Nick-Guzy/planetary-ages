@@ -32,4 +32,13 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
     expect(Mar.name).toEqual("Mar");
     expect(marAge).toBeGreaterThanOrEqual(16)
 });
+
+  test("Should correctly construct Mars and tell you how old you are on Mars", () => {
+    const person = new Person(31, 28, 33);
+    const Jup = new Planet("Jup", 11.86);
+    const jupAge = Jup.checkType(person);
+    expect(Jup.name).toEqual("Jup");
+    expect(jupAge).toBeGreaterThanOrEqual(2)
+  });
+
 });
