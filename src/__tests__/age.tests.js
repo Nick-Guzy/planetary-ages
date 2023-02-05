@@ -74,4 +74,12 @@ test("Should correctly tell you how long since you've had a birthday on Mars", (
   expect(marAge-marPastAge).toBeGreaterThanOrEqual(1.5)
 });
 
+test("Should correctly tell you how long since you've had a birthday on Jupiter", () => {
+  const person = new Person(31, 28, 33);
+  const Jup = new Planet("Jup", 11.86);
+  const jupAge = Jup.checkType(person.currentAge);
+  const jupPastAge = Jup.checkType(person.pastAge);
+  expect(jupAge-jupPastAge).toBeGreaterThanOrEqual(0.2)
+});
+
 });
