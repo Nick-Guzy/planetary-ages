@@ -91,4 +91,13 @@ test("Should correctly tell you how long until you'll have a birthday on Earth",
 
 });
 
+test("Should correctly tell you how long until you'll have a birthday on Mercury", () => {
+  const person = new Person(31, 28, 33);
+  const Mer = new Planet("Mer", .24);
+  const merAge = Mer.checkType(person.currentAge);
+  const merFutureAge = Mer.checkType(person.futureAge);
+  expect(merFutureAge-merAge).toBeGreaterThanOrEqual(8)
+
+});
+
 });
