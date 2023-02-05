@@ -3,8 +3,8 @@ export default class Planet {
   this.name = name;
   this.ageModifier = ageModifier;
     }
-    checkType(person) {
-      let planetAge = person.currentAge / this.ageModifier;
+    checkType(age) {
+      let planetAge = age / this.ageModifier;
       return planetAge;
     }
   };
