@@ -17,11 +17,19 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
   expect(merAge).toBeGreaterThanOrEqual(129)
   });
 
-  test("Should correctly construct Venus and you how old you are on Venus", () => {
+  test("Should correctly construct Venus and tell you how old you are on Venus", () => {
     const person = new Person(31, 28, 33);
     const Ven = new Planet("Ven", .62);
     const venAge = Ven.checkType(person);
     expect(Ven.name).toEqual("Ven");
     expect(venAge).toBeGreaterThanOrEqual(50)
   });
+
+  test("Should correctly construct Mars and tell you how old you are on Mars", () => {
+    const person = new Person(31, 28, 33);
+    const Mar = new Planet("Mar", 1.88);
+    const marAge = Mar.checkType(person);
+    expect(Mar.name).toEqual("Mar");
+    expect(marAge).toBeGreaterThanOrEqual(16)
+});
 });
