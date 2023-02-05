@@ -110,4 +110,13 @@ test("Should correctly tell you how long until you'll have a birthday on Venus",
 
 });
 
+test("Should correctly tell you how long until you'll have a birthday on Mars", () => {
+  const person = new Person(31, 28, 33);
+  const Mar = new Planet("Mar", 1.88);
+  const marAge = Mar.checkType(person.currentAge);
+  const marFutureAge = Mar.checkType(person.futureAge);
+  expect(marFutureAge-marAge).toBeGreaterThanOrEqual(1)
+
+});
+
 });
