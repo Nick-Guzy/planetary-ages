@@ -82,4 +82,13 @@ test("Should correctly tell you how long since you've had a birthday on Jupiter"
   expect(jupAge-jupPastAge).toBeGreaterThanOrEqual(0.2)
 });
 
+test("Should correctly tell you how long until you'll have a birthday on Earth", () => {
+  const person = new Person(31, 28, 33);
+  const Ear = new Planet("Ear", 1);
+  const earAge = Ear.checkType(person.currentAge);
+  const earFutureAge = Ear.checkType(person.futureAge);
+  expect(earFutureAge-earAge).toBeGreaterThanOrEqual(2)
+
+});
+
 });
