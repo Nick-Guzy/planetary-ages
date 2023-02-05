@@ -3,5 +3,5 @@ export default class Person {
   this.currentAge = currentAge;
   this.pastAge = pastAge;
   this.futureAge = futureAge;
-}
+  }
 };

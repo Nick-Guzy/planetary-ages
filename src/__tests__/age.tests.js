@@ -7,7 +7,7 @@ const person = new Person(31, 28, 33);
   expect(person.currentAge).toEqual(31);
   expect(person.pastAge).toEqual(28);
   expect(person.futureAge).toEqual(33);
-  });
+});
   
 test("Should correctly construct Mercury and tell you how old you are on Mercury", () => {
   const person = new Person(31, 28, 33);
@@ -15,7 +15,7 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
   const merAge = Mer.checkType(person.currentAge);
   expect(Mer.name).toEqual("Mer");
   expect(merAge).toBeGreaterThanOrEqual(129)
-  });
+});
 
   test("Should correctly construct Venus and tell you how old you are on Venus", () => {
     const person = new Person(31, 28, 33);
@@ -31,7 +31,7 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
     const marAge = Mar.checkType(person.currentAge);
     expect(Mar.name).toEqual("Mar");
     expect(marAge).toBeGreaterThanOrEqual(16)
-});
+  });
 
   test("Should correctly construct Mars and tell you how old you are on Mars", () => {
     const person = new Person(31, 28, 33);
@@ -47,7 +47,6 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
     const earAge = Ear.checkType(person.currentAge);
     const earPastAge = Ear.checkType(person.pastAge);
     expect(earAge-earPastAge).toBeGreaterThanOrEqual(3)
-
   });
 
 test("Should correctly tell you how long since you've had a birthday on Mercury", () => {
@@ -88,7 +87,6 @@ test("Should correctly tell you how long until you'll have a birthday on Earth",
   const earAge = Ear.checkType(person.currentAge);
   const earFutureAge = Ear.checkType(person.futureAge);
   expect(earFutureAge-earAge).toBeGreaterThanOrEqual(2)
-
 });
 
 test("Should correctly tell you how long until you'll have a birthday on Mercury", () => {
@@ -97,7 +95,6 @@ test("Should correctly tell you how long until you'll have a birthday on Mercury
   const merAge = Mer.checkType(person.currentAge);
   const merFutureAge = Mer.checkType(person.futureAge);
   expect(merFutureAge-merAge).toBeGreaterThanOrEqual(8)
-
 });
 
 
@@ -107,7 +104,6 @@ test("Should correctly tell you how long until you'll have a birthday on Venus",
   const venAge = Ven.checkType(person.currentAge);
   const venFutureAge = Ven.checkType(person.futureAge);
   expect(venFutureAge-venAge).toBeGreaterThanOrEqual(3)
-
 });
 
 test("Should correctly tell you how long until you'll have a birthday on Mars", () => {
@@ -116,7 +112,6 @@ test("Should correctly tell you how long until you'll have a birthday on Mars", 
   const marAge = Mar.checkType(person.currentAge);
   const marFutureAge = Mar.checkType(person.futureAge);
   expect(marFutureAge-marAge).toBeGreaterThanOrEqual(1)
-
 });
 
 test("Should correctly tell you how long until you'll have a birthday on Jupiter", () => {
@@ -125,7 +120,5 @@ test("Should correctly tell you how long until you'll have a birthday on Jupiter
   const jupAge = Jup.checkType(person.currentAge);
   const jupFutureAge = Jup.checkType(person.futureAge);
   expect(jupFutureAge-jupAge).toBeGreaterThanOrEqual(0.1)
-
 });
-
 });
