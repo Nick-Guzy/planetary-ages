@@ -46,19 +46,23 @@ test("Should correctly construct Mercury and tell you how old you are on Mercury
     const Ear = new Planet("Ear", 1);
     const earAge = Ear.checkType(person.currentAge);
     const earPastAge = Ear.checkType(person.pastAge);
-
     expect(earAge-earPastAge).toBeGreaterThanOrEqual(3)
 
   });
 
-// test("Should correctly tell you how long since you've had a birthday on Mercury", () => {
-//   const person = new Person(31, 28, 33);
-//   const Mer = new Planet("Mer", .24);
-//   const merAge = Mer.checkType(person);
-//   expect(Mer.name).toEqual("Mer");
-//   expect(merAge).toBeGreaterThanOrEqual(129)
-  
+test("Should correctly tell you how long since you've had a birthday on Mercury", () => {
+  const person = new Person(31, 28, 33);
+  const Mer = new Planet("Mer", .24);
+  const merAge = Mer.checkType(person.currentAge);
+  const merPastAge = Mer.checkType(person.pastAge);
+  expect(merAge-merPastAge).toBeGreaterThanOrEqual(12)
+});
 
-// });
-
+test("Should correctly tell you how long since you've had a birthday on Venus", () => {
+  const person = new Person(31, 28, 33);
+  const Ven = new Planet("Ven", .62);
+  const venAge = Ven.checkType(person.currentAge);
+  const venPastAge = Ven.checkType(person.pastAge);
+  expect(venAge-venPastAge).toBeGreaterThanOrEqual(4)
+});
 });
