@@ -10,11 +10,10 @@ const person = new Person(31, 28, 33);
   });
   
 test("Should correctly construct Mercury and tell you how old you are on Mercury", () => {
+  const person = new Person(31, 28, 33);
   const Mer = new Planet("Mer", .24);
+  const merAge = Mer.checkType(person);
   expect(Mer.name).toEqual("Mer");
+  expect(merAge).toBeGreaterThanOrEqual(129)
   });
-
-// test("Should correcty calculate age on Mercury", () => {
-//   const merAge = calcAge()  
-// });
 });
